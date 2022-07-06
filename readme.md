@@ -1,6 +1,6 @@
 # Entrega de Proyecto Final de Python - Comisión 36945
 
-# Ante la falta de respuesta de los compañeros asignados oportunamente 
+# Ante la falta de respuesta de los compañeros asignados, el tutor a cargo me autorizó a desarrollar a solas el proyecto final.
 
 # Descarga
 
