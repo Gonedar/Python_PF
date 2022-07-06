@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Sheldon Bakery: Borrar Torta
+{% endblock %}
+
+{% block subtitulo %}
+Borrar de Torta
+{% endblock %}
+
+{% block contenido %}
+
+<h3 style="color: red">Estás por eliminar el producto {{object.name}}, estás seguro?</h3>
+
+<form method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit">Eliminar</button>
+</form>
+
+
+{% endblock %}

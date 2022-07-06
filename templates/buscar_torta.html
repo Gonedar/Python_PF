@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+
+{% block titulo %}
+SB: Buscar torta
+{% endblock %}
+
+{% block subtitulo %}
+{% endblock %}
+
+{% block contenido %}
+<div class="d-flex" style="margin-top:5rem; margin-left:7rem">
+
+    {% for torta in tortas %}
+    <div class="card" style="width: 18rem;">
+        {% if torta.image %}
+        <img src="{{torta.image.url}}" class="card-img-top">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{torta.name}}</h5>
+            <p class="card-text">{{torta.description}}</p>
+            <p class="card-text">{{torta.weight}}</p>
+            <p class="card-text">{{torta.price}}</p>
+            <a href="/contact/" class="btn btn-primary">Hacenos tu pedido!</a>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+<div style="color: red;">
+    {{errors}}
+</div>
+{% endblock %}

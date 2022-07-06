@@ -1,0 +1,25 @@
+{% extends "base.html"%}
+
+{% block titulo %}
+Sheldon Bakery: Cargar Torta
+{% endblock %}
+
+{% block subtitulo %}
+Título de form para cargar tortas
+{% endblock %}
+
+{% block contenido %}
+
+{% if form %}
+<h2 style="margin-left: 10rem">Complete los campos de la nueva torta</h2>
+<form action="" method="POST" style="margin-left:10rem;margin-top:7rem" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit" , value="Enviar">
+</form>
+
+{% endif %}
+
+{% endblock %}
